@@ -17,6 +17,7 @@
     "@vaadin/component-base": "24.1.4",
     "@vaadin/confirm-dialog": "24.1.4",
     "@vaadin/context-menu": "24.1.4",
+    "@vaadin/cookie-consent": "24.1.4",
     "@vaadin/custom-field": "24.1.4",
     "@vaadin/date-picker": "24.1.4",
     "@vaadin/date-time-picker": "24.1.4",
@@ -106,6 +107,7 @@
       "@vaadin/component-base": "24.1.4",
       "@vaadin/confirm-dialog": "24.1.4",
       "@vaadin/context-menu": "24.1.4",
+      "@vaadin/cookie-consent": "24.1.4",
       "@vaadin/custom-field": "24.1.4",
       "@vaadin/date-picker": "24.1.4",
       "@vaadin/date-time-picker": "24.1.4",
@@ -178,7 +180,7 @@
       "workbox-core": "7.0.0",
       "workbox-precaching": "7.0.0"
     },
-    "hash": "dab916f7568ddf7c1412f4539935b9d88d4892f427f21fb6e65617c49fa18309"
+    "hash": "653aeb5430233dd5cea5a6e5aaca0a3f8e207136a9f9ff14427de14be8995f4e"
   },
   "overrides": {
     "@vaadin/bundles": "$@vaadin/bundles",
@@ -248,6 +250,7 @@
     "@vaadin/overlay": "$@vaadin/overlay",
     "@vaadin/a11y-base": "$@vaadin/a11y-base",
     "@vaadin/side-nav": "$@vaadin/side-nav",
-    "mobile-drag-drop": "$mobile-drag-drop"
+    "mobile-drag-drop": "$mobile-drag-drop",
+    "@vaadin/cookie-consent": "$@vaadin/cookie-consent"
   }
 }

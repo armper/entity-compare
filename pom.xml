@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.vaadin.addons.mygroup</groupId>
@@ -41,7 +41,8 @@
     </dependencyManagement>
 
     <repositories>
-        <!-- The order of definitions matters. Explicitly defining central here to make sure it has the highest priority. -->
+        <!-- The order of definitions matters. Explicitly defining central here to make sure it has
+        the highest priority. -->
         <repository>
             <id>central</id>
             <url>https://repo.maven.apache.org/maven2</url>
@@ -63,7 +64,8 @@
     </repositories>
 
     <pluginRepositories>
-        <!-- The order of definitions matters. Explicitly defining central here to make sure it has the highest priority. -->
+        <!-- The order of definitions matters. Explicitly defining central here to make sure it has
+        the highest priority. -->
         <pluginRepository>
             <id>central</id>
             <url>https://repo.maven.apache.org/maven2</url>
@@ -82,7 +84,8 @@
     <dependencies>
         <dependency>
             <groupId>com.vaadin</groupId>
-            <!-- Consider limiting the dependencies to flow-server only something, but for most end users depending on vaadin-core is ok -->
+            <!-- Consider limiting the dependencies to flow-server only something, but for most end
+            users depending on vaadin-core is ok -->
             <artifactId>vaadin-core</artifactId>
         </dependency>
         <dependency>
@@ -95,6 +98,34 @@
             <artifactId>vaadin-testbench</artifactId>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.28</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- JUnit Jupiter (JUnit 5) -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.10.0</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>5.10.0</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.javers</groupId>
+            <artifactId>javers-core</artifactId>
+            <version>7.3.2</version>
+        </dependency>
+
+
     </dependencies>
 
     <build>
@@ -120,7 +151,7 @@
                     <excludes>
                         <exclude>META-INF/VAADIN/config/flow-build-info.json</exclude>
                     </excludes>
-                </configuration>                     
+                </configuration>
             </plugin>
 
             <plugin>
@@ -128,7 +159,7 @@
                 <artifactId>jetty-maven-plugin</artifactId>
                 <version>11.0.14</version>
                 <configuration>
-                    <scan>-1</scan>
+                    <scan>2</scan>
                     <!-- Use test scope because the UI/test classes are in
                         the test package. -->
                     <useTestScope>true</useTestScope>
@@ -155,6 +186,7 @@
                     </execution>
                 </executions>
             </plugin>
+            
         </plugins>
     </build>
 
@@ -325,5 +357,3 @@
         </profile>
     </profiles>
 </project>
-
-
